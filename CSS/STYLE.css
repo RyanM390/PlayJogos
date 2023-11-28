@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #0c0d14;
+    font-family: 'Nunito', sans-serif;
+}
+/* HEADER */
+.header{
+    width: 100%;
+    height: 90px;
+    background-color: #081b29;
+}
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #081b29EE;
+    color: aliceblue;
+    position: fixed;    
+    z-index: 2;
+}
+header h1{
+    width: 100%;
+    
+    font-family: 'Skranji', sans-serif;
+    text-align: center;
+    text-shadow: -3px 3px #000;
+    color: #00ABF0;
+}
+.icon_logo {
+    height: 80px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slogan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav{
+    display: flex;
+    list-style-type: none;
+}
+.nav a , li{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 25px;
+}
+.nav a li:hover{
+    color: #b82b8f;
+    transition: .2s;
+    
+}
+
+/* BANNER */
+.banner{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Skranji', sans-serif;
+    text-shadow: -2px 2px #000;
+    background: #b82b8f90;
+    background: linear-gradient(297deg, #b82b8f80 0%, #00417180 15%, #99339980 40%, #99339980 60%, #00417180 85%, #99339980 100%);
+}
+
+
+
+/* SLIDE */
+
+.slide{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 350px;
+   
+    /* background-color: #0C0D14; */
+    position: relative;
+    overflow: hidden;
+}
+.jogos{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: girar 60s linear infinite ;
+}
+.jogos {
+    flex: 0 0 100%;
+    /* Garante que cada item ocupa 100% da largura do container */
+}
+@keyframes girar {
+
+    from {
+        right: -150%;
+    }
+
+    to {
+        right: 100%;
+       
+    }
+}
+@keyframes carouselAnimation {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.game_slide{
+    width: 360px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 60px;
+    border-radius: 10px;
+    /* border: 1px solid #FFF; */
+    /* background-color: #081b29; */
+    box-shadow: -9px 10px 20px 0px black;
+    background-color: #081b29;
+}
+.game_slide:hover{
+    border: 1px solid #b82b8f;
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.title{
+    width: 100%;
+    height: 50px;
+    font-family: 'Skranji', sans-serif;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: #00ABF0;
+    text-shadow: -2px 2px #000;
+    box-shadow: -3px 3px black;
+    margin-bottom: 30px;
+    background: #b82b8f30;
+    background: linear-gradient(297deg, #b82b8f60 0%, #00417160 15%, #99339960 40%, #99339960 60%, #00417160 85%, #99339960 100%);
+}
+.container_game{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 30px 250px; 
+    /* border: 1px solid  black; */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 55px;
+   
+}
+.game{
+    width: 180px;
+    height: 180px;
+    border: 1px solid  #081b29;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Skranji', sans-serif;
+    color: #FFF;
+    text-shadow: -2px 2px black;
+    text-align: center;
+    background-color: #004171;
+    box-shadow: -9px 10px 20px 0px black;
+}
+.game:hover{
+    border: 3px solid #00ABF0;
+    color:  aqua;
+    background-color: #006181;
+    font-size: 20px; 
+    /* text-shadow: -1px 1px #fff; */
+    transition: 0.5s;
+    box-shadow: -10px 15px 20px 0px black;
+    transform: scale(1.1);/* Aumenta o tamanho ao passar o mouse */
+}
+
+.icon_game{
+    height: 80px;
+}
+.nome_jogo{
+    text-align: center;
+    width: 90px;
+}
+
+
+/* VIDEO SLIDE */
+.video-container {
+    border-radius: 10px;
+    position: relative;
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-container:hover .overlay {
+    opacity: 1;
+}
+
+
+.divisor{
+    width: 100%;
+    height: 15px;
+    background: #b82b8faa;
+    background: linear-gradient(297deg, #b82b8faa 0%, #004171aa 15%, #993399aa 40%, #993399aa 60%, #004171aa 85%, #993399aa 100%);
+}
+/* RODAPÉ */
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 200px;
+    background-color: #081b29;
+    font-size: 18px;
+}
+.coluna{
+    display: flex;
+    flex-direction: column;
+}
+.coluna h4{
+    color: #fff;
+    margin-block: 10px;
+}
+.coluna a {
+    color: #00ABF0;
+    text-decoration: solid;
+    margin-block: 3px;
+}
+.coluna a:hover{
+    color: aqua;
+}
+
+
+/*    RESPONSIVIDADE    */
+
+@media screen and (max-width: 768px) {
+    .slogan h4 {
+        font-size: 20px;
+    }
+    
+    header {
+        width: 100%;
+        height: 100px;
+    }
+
+    .icon_logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nav li {
+        font-size: 16px;
+    }
+    
+    .container_game {
+        gap: 30px 100px ;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    header {
+        width: 100%;
+    }
+    
+    .slogan h1 {
+        font-size: 20px;
+    }
+    
+    .slogan h4 {
+        font-size: 8px;
+    }
+
+    .icon_logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav li {
+        font-size: 14px;
+        margin-right: 2px;
+    }
+
+    .banner h3 {
+        font-size: 20px;
+    }
+
+    .slide {
+        width: 100%;
+    }
+    
+    .game {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .container_game {
+        width: ;
+        gap: 30px 10px;
+    }
+
+    .h4 {
+        font-size: 12px;
+    }
+
+    .footer a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .game {
+        width: 118px;
+        height: 118px;
+    }
+
+    .banner h3 {
+        font-size: 16px;
+    }
+    
+    .container_game {
+        gap: 30px 5px;
+    }
+
+    .nav li {
+        font-size: 13px;
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .slogan h1 {
+        font-size: 15px;
+    }
+
+    .slogan h4 {
+        font-size: 9px;
+    }
+    
+    .title h3 {
+        font-size: 24px;
+    }
+
+    .nav li {
+        font-size: 11px;
+        margin-left: 1px;
+    }
+    
+    .game {
+        width: 100px;
+        height: 100px;
+    }
+
+    .icon_game{
+        height: 50px;
+    }
+
+    .footer a {
+        font-size: 12px;
+    }
+}
